@@ -1,0 +1,257 @@
+Using curl_cffi for Yahoo Finance API
+================================================================================
+LARGE-SCALE ALGORITHMIC TRADING BACKTESTING SYSTEM
+================================================================================
+
+[STAGE 1/9] Loading market data for 49 tickers...
+Date range: 10 years of daily data
+✓ Data loaded: 50 tickers, 3651 days each
+  Total data points: 182,550
+
+✓ Data loading complete: 50 tickers loaded successfully
+
+[STAGE 2/9] Initializing 20 trading strategies...
+✓ 20 strategies initialized:
+  1. SMA_10_20
+  2. SMA_20_50
+  3. SMA_50_200
+  4. SMA_5_15
+  5. SMA_15_30
+  6. EMA_12_26
+  7. EMA_8_21
+  8. RSI_30_70
+  9. RSI_20_80
+  10. MACD
+  11. Bollinger_MeanReversion
+  12. Volatility_Breakout
+  13. Momentum_21D
+  14. Momentum_63D
+  15. Momentum_252D
+  16. MultiFactorRank
+  17. Volatility_Compression
+  18. Overnight_Fade
+  19. SMA_30_60
+  20. EMA_20_40
+
+[STAGE 3/9] Running backtests for all strategies on all tickers...
+  Progress: 100/1000 backtests completed (10.0%)
+  Progress: 200/1000 backtests completed (20.0%)
+  Progress: 300/1000 backtests completed (30.0%)
+  Progress: 400/1000 backtests completed (40.0%)
+  Progress: 500/1000 backtests completed (50.0%)
+  Progress: 600/1000 backtests completed (60.0%)
+  Progress: 700/1000 backtests completed (70.0%)
+  Progress: 800/1000 backtests completed (80.0%)
+  Progress: 900/1000 backtests completed (90.0%)
+  Progress: 1000/1000 backtests completed (100.0%)
+✓ All backtests complete: 1000 total backtests executed
+
+  Strategy Performance Summary:
+  ----------------------------------------------------------------------
+  Strategy                       Avg Sharpe   Avg Return   Avg MaxDD   
+  ----------------------------------------------------------------------
+  SMA_10_20                           -0.946      -4.27%     -53.62%
+  SMA_20_50                           -0.534      -2.00%     -33.20%
+  SMA_50_200                          -0.542      -0.63%     -13.84%
+  SMA_5_15                            -1.229      -5.58%     -63.50%
+  SMA_15_30                           -0.777      -3.58%     -45.16%
+  EMA_12_26                           -0.506      -2.96%     -43.48%
+  EMA_8_21                            -0.663      -3.54%     -48.79%
+  RSI_30_70                           -1.965      -4.51%     -52.08%
+  RSI_20_80                           -1.529      -1.73%     -25.46%
+  MACD                                -1.097      -5.92%     -63.15%
+  Bollinger_MeanReversion             -1.990      -3.84%     -41.38%
+  Volatility_Breakout                 -0.138      -0.52%     -17.34%
+  Momentum_21D                        -4.053      -4.12%     -47.21%
+  Momentum_63D                        -3.353      -2.73%     -34.76%
+  Momentum_252D                       -3.214      -1.95%     -25.28%
+  MultiFactorRank                     -1.515      -3.34%     -43.66%
+  Volatility_Compression              -1.073      -0.41%      -8.22%
+  Overnight_Fade                      -0.676      -0.40%      -5.52%
+  SMA_30_60                           -0.525      -1.81%     -31.52%
+  EMA_20_40                           -0.277      -1.77%     -34.01%
+
+[STAGE 4/9] Running Monte Carlo simulations (10,000 iterations per strategy)...
+  WARNING: This will take significant time...
+
+  Strategy 1/20: SMA_10_20
+    Running 10,000 simulations... ✓
+    Sharpe - Mean: -0.648, Std: 1.468, 5th pct: -0.475
+    Return - Mean: -100.00%, Std: 0.00%, 5th pct: -100.00%
+
+  Strategy 2/20: SMA_20_50
+    Running 10,000 simulations... ✓
+    Sharpe - Mean: -0.212, Std: 0.037, 5th pct: -0.271
+    Return - Mean: -100.00%, Std: 0.02%, 5th pct: -100.00%
+
+  Strategy 3/20: SMA_50_200
+    Running 10,000 simulations... ✓
+    Sharpe - Mean: -0.096, Std: 0.039, 5th pct: -0.161
+    Return - Mean: -95.19%, Std: 18.64%, 5th pct: -99.96%
+
+  Strategy 4/20: SMA_5_15
+    Running 10,000 simulations... ✓
+    Sharpe - Mean: -8.706, Std: 2.220, 5th pct: -9.902
+    Return - Mean: -100.00%, Std: 0.00%, 5th pct: -100.00%
+
+  Strategy 5/20: SMA_15_30
+    Running 10,000 simulations... ✓
+    Sharpe - Mean: -0.353, Std: 0.125, 5th pct: -0.408
+    Return - Mean: -100.00%, Std: 0.00%, 5th pct: -100.00%
+
+  Strategy 6/20: EMA_12_26
+    Running 10,000 simulations... ✓
+    Sharpe - Mean: -0.273, Std: 0.038, 5th pct: -0.336
+    Return - Mean: -100.00%, Std: 0.00%, 5th pct: -100.00%
+
+  Strategy 7/20: EMA_8_21
+    Running 10,000 simulations... ✓
+    Sharpe - Mean: -0.324, Std: 0.039, 5th pct: -0.388
+    Return - Mean: -100.00%, Std: 0.00%, 5th pct: -100.00%
+
+  Strategy 8/20: RSI_30_70
+    Running 10,000 simulations... ✓
+    Sharpe - Mean: -0.892, Std: 1.263, 5th pct: -0.921
+    Return - Mean: -100.00%, Std: 0.00%, 5th pct: -100.00%
+
+  Strategy 9/20: RSI_20_80
+    Running 10,000 simulations... ✓
+    Sharpe - Mean: -0.514, Std: 0.070, 5th pct: -0.639
+    Return - Mean: -100.00%, Std: 0.00%, 5th pct: -100.00%
+
+  Strategy 10/20: MACD
+    Running 10,000 simulations... ✓
+    Sharpe - Mean: -8.944, Std: 0.890, 5th pct: -9.606
+    Return - Mean: -100.00%, Std: 0.00%, 5th pct: -100.00%
+
+  Strategy 11/20: Bollinger_MeanReversion
+    Running 10,000 simulations... ✓
+    Sharpe - Mean: -0.905, Std: 0.178, 5th pct: -1.145
+    Return - Mean: -100.00%, Std: 0.00%, 5th pct: -100.00%
+
+  Strategy 12/20: Volatility_Breakout
+    Running 10,000 simulations... ✓
+    Sharpe - Mean: -0.065, Std: 0.038, 5th pct: -0.128
+    Return - Mean: -76.22%, Std: 193.14%, 5th pct: -99.95%
+
+  Strategy 13/20: Momentum_21D
+    Running 10,000 simulations... ✓
+    Sharpe - Mean: -1.051, Std: 0.099, 5th pct: -1.224
+    Return - Mean: -100.00%, Std: 0.00%, 5th pct: -100.00%
+
+  Strategy 14/20: Momentum_63D
+    Running 10,000 simulations... ✓
+    Sharpe - Mean: -1.044, Std: 0.068, 5th pct: -1.158
+    Return - Mean: -100.00%, Std: 0.00%, 5th pct: -100.00%
+
+  Strategy 15/20: Momentum_252D
+    Running 10,000 simulations... ✓
+    Sharpe - Mean: -1.693, Std: 0.153, 5th pct: -1.942
+    Return - Mean: -100.00%, Std: 0.00%, 5th pct: -100.00%
+
+  Strategy 16/20: MultiFactorRank
+    Running 10,000 simulations... ✓
+    Sharpe - Mean: -0.580, Std: 0.039, 5th pct: -0.644
+    Return - Mean: -100.00%, Std: 0.00%, 5th pct: -100.00%
+
+  Strategy 17/20: Volatility_Compression
+    Running 10,000 simulations... ✓
+    Sharpe - Mean: -0.153, Std: 0.041, 5th pct: -0.221
+    Return - Mean: -93.42%, Std: 5.57%, 5th pct: -98.47%
+
+  Strategy 18/20: Overnight_Fade
+    Running 10,000 simulations... ✓
+    Sharpe - Mean: -0.299, Std: 0.046, 5th pct: -0.383
+    Return - Mean: -94.31%, Std: 2.23%, 5th pct: -97.36%
+
+  Strategy 19/20: SMA_30_60
+    Running 10,000 simulations... ✓
+    Sharpe - Mean: -0.191, Std: 0.039, 5th pct: -0.254
+    Return - Mean: -99.99%, Std: 0.34%, 5th pct: -100.00%
+
+  Strategy 20/20: EMA_20_40
+    Running 10,000 simulations... ✓
+    Sharpe - Mean: -0.167, Std: 0.038, 5th pct: -0.229
+    Return - Mean: -99.99%, Std: 0.10%, 5th pct: -100.00%
+
+✓ Monte Carlo complete: 200,000 total simulations executed
+
+[STAGE 5/9] Building Neural Network for next-day return prediction...
+  Architecture: Input → Hidden(64, ReLU) → Output(1, Linear)
+  Training: 200 epochs minimum, manual forward/backward pass
+
+  Preparing features from all tickers...
+  Total samples: 176,575
+  Training samples: 141,260
+  Test samples: 35,315
+
+[STAGE 6/9] Training Neural Network for 200 epochs...
+    Epoch  10/200 - Loss: 0.006989
+    Epoch  20/200 - Loss: 0.003037
+    Epoch  30/200 - Loss: 0.001908
+    Epoch  40/200 - Loss: 0.001445
+    Epoch  50/200 - Loss: 0.001207
+    Epoch  60/200 - Loss: 0.000990
+    Epoch  70/200 - Loss: 0.000865
+    Epoch  80/200 - Loss: 0.000775
+    Epoch  90/200 - Loss: 0.000668
+    Epoch 100/200 - Loss: 0.000596
+    Epoch 110/200 - Loss: 0.000539
+    Epoch 120/200 - Loss: 0.000491
+    Epoch 130/200 - Loss: 0.000450
+    Epoch 140/200 - Loss: 0.000416
+    Epoch 150/200 - Loss: 0.000382
+    Epoch 160/200 - Loss: 0.000350
+    Epoch 170/200 - Loss: 0.000330
+    Epoch 180/200 - Loss: 0.000305
+    Epoch 190/200 - Loss: 0.000291
+    Epoch 200/200 - Loss: 0.000268
+
+✓ Neural Network training complete
+  Test MSE: 0.000339
+  Test MAE: 0.006225
+  Direction Accuracy: 49.96%
+
+[STAGE 7/9] Running Portfolio Optimization (Max Sharpe Ratio)...
+  Optimizing portfolio of 20 strategies...
+  Running scipy.optimize.minimize...
+
+✓ Portfolio Optimization complete
+  Optimal Sharpe Ratio: -0.155
+  Expected Annual Return: -9.58%
+  Expected Annual Volatility: 61.95%
+
+  Top 10 Strategy Weights:
+     1. Volatility_Breakout            100.00%
+     2. EMA_20_40                        0.00%
+     3. EMA_12_26                        0.00%
+     4. MACD                             0.00%
+     5. SMA_5_15                         0.00%
+     6. RSI_30_70                        0.00%
+     7. Momentum_21D                     0.00%
+     8. SMA_10_20                        0.00%
+     9. EMA_8_21                         0.00%
+    10. SMA_15_30                        0.00%
+
+[STAGE 8/9] Generating 50+ matplotlib charts...
+  Generating strategy equity curves...
+  Generating performance comparison charts...
+  Generating Monte Carlo distribution charts...
+Traceback (most recent call last):
+  File "/home/user/cpu_heavy_trading_analysis/trading_backtest_system.py", line 954, in <module>
+    ax2.hist(returns, bins=50, color='seagreen', alpha=0.7, edgecolor='black')
+  File "/root/.local/lib/python3.11/site-packages/matplotlib/_api/deprecation.py", line 453, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.11/site-packages/matplotlib/__init__.py", line 1524, in inner
+    return func(
+           ^^^^^
+  File "/root/.local/lib/python3.11/site-packages/matplotlib/axes/_axes.py", line 7132, in hist
+    m, bins = np.histogram(x[i], bins, weights=w[i], **hist_kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.11/site-packages/numpy/lib/_histograms_impl.py", line 792, in histogram
+    bin_edges, uniform_bins = _get_bin_edges(a, bins, range, weights)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.11/site-packages/numpy/lib/_histograms_impl.py", line 449, in _get_bin_edges
+    raise ValueError(
+ValueError: Too many bins for data range. Cannot create 50 finite-sized bins.
